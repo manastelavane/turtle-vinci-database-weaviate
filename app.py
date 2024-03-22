@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import weaviate
 
-app = Flask(__name__)
+app = Flask(__name__) 
 
 # Initialize Weaviate client
 weaviate_url = "https://turtle-vinci-zvhb2ah9.weaviate.network"
@@ -14,6 +14,7 @@ client = weaviate.Client(
         "X-HuggingFace-Api-Key": "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"  # Replace with your inference API key
     }
 )
+
 
 @app.route('/')
 def query_handler():
