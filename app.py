@@ -4,8 +4,8 @@ import weaviate
 app = Flask(__name__)
 
 # Initialize Weaviate client
-weaviate_url = "https://vinci3-863qlivv.weaviate.network"
-api_key = "OWND9kyZDCVZG9MOa31Z7rZ8FA2v0PPIJe4T"
+weaviate_url = "https://turtle-vinci-zvhb2ah9.weaviate.network"
+api_key = "5AcSBMh0roKT3LKZOCrJhOTxXVfTngLAvyPB"
 
 client = weaviate.Client(
     url=weaviate_url,
@@ -23,9 +23,10 @@ def query_handler():
     # Perform a text-based similarity search with the query word
     query_result = (
         client.query
-        .get("ImageStroke", ["nameOfImage", "strokeOfImage"])
+        .get("ImageStroke", ["nameOfImage"])
         .with_near_text({
-            "concepts": [query_word]
+            "concepts": [query_word],
+            "distance": 0.7
         })
         .with_limit(limit)
         .do()
