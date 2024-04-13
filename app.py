@@ -4,14 +4,14 @@ import weaviate
 app = Flask(__name__) 
 
 # Initialize Weaviate client
-weaviate_url = "https://turtle-vinci-zvhb2ah9.weaviate.network"
-api_key = "5AcSBMh0roKT3LKZOCrJhOTxXVfTngLAvyPB"
+weaviate_url = "https://turtle-vinci-mtccq694.weaviate.network"
+api_key = "ZElsNdQp6rOcmXzhZe7WuknuVqN6tMyKvSou"
 
 client = weaviate.Client(
     url=weaviate_url,
     auth_client_secret=weaviate.AuthApiKey(api_key=api_key),
     additional_headers={
-        "X-HuggingFace-Api-Key": "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"  # Replace with your inference API key
+        "X-HuggingFace-Api-Key": "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"  # Replace with your inference API key
     }
 )
 
