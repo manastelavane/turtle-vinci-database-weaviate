@@ -4,8 +4,8 @@ import weaviate
 app = Flask(__name__) 
 
 # Initialize Weaviate client
-weaviate_url = "https://turtle-vinci-mtccq694.weaviate.network"
-api_key = "ZElsNdQp6rOcmXzhZe7WuknuVqN6tMyKvSou"
+weaviate_url = "https://turtle-vinci-cqn75su9.weaviate.network"
+api_key = "7yRvzKTqScVYewcwkhYRrMHXVgVOUkNKnyXA"
 
 client = weaviate.Client(
     url=weaviate_url,
